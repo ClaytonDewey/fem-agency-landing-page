@@ -1,16 +1,10 @@
 @use '../util' as *;
 
-.hero {
+header {
   position: relative;
-  // height: 100%;
+  height: rem(538);
 
-  // h2,
-  // img {
-  //   position: absolute;
-  // }
-
-  // h2 {
-  //   z-index: 20;
-  //   top: 50%;
-  // }
+  img {
+    max-width: 100%;
+  }
 }
