@@ -1,0 +1,37 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  // Primary
+  --clr-soft-red: hsl(7, 99%, 70%);
+  --clr-yellow: hsl(51, 100%, 49%);
+  --clr-dark-green(graphic design text): hsl(167, 40%, 24%);
+  --clr-dark-blue(photography text): hsl(198, 62%, 26%);
+  --clr-dark-cyan(footer): hsl(168, 34%, 41%);
+
+  // Neutral
+  --clr-gray-400: hsl(212, 27%, 19%);
+  --clr-gray-300: hsl(213, 9%, 39%);
+  --clr-gray-200: hsl(232, 10%, 55%);
+  --clr-gray-100: hsl(210, 4%, 67%);
+  --clr-white: #fff;
+
+  // Font-family
+  --ff-sans: 'Barlow', Arial, Helvetica, sans-serif;
+  --ff-serif: 'Fraunces', Cochin, Georgia, serif;
+
+  // Font-sizes
+  --fs-4xlarge: #{rem(61.04)};
+  --fs-3xlarge: #{rem(48.832)};
+  --fs-2xlarge: #{rem(39.06)};
+  --fs-xlarge: #{rem(31.25)};
+  --fs-large: #{rem(25)};
+  --fs-med: #{rem(20)};
+  --fs-reg: #{rem(18)};
+  --fs-small: #{rem(12.8)};
+  --fs-xsmall: #{rem(10.24)};
+
+  // Flexbox gap/columns
+  --gap: #{rem(20)};
+  --columns: 2;
+}
