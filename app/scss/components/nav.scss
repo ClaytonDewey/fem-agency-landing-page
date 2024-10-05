@@ -1,0 +1,68 @@
+@use '../util' as *;
+
+.nav {
+  &__toggler {
+    position: absolute;
+    cursor: pointer;
+    right: rem(10);
+    top: rem(5);
+    font-size: rem(20);
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    z-index: 200;
+    padding: rem(15);
+    -webkit-appearance: button;
+    transition: all 0.3s ease;
+
+    .icon {
+      &__bar {
+        background-color: var(--clr-white);
+        display: block;
+        width: rem(22);
+        height: 2px;
+        border-radius: 1px;
+        transform: rotate(0deg) translate(0px, 0px);
+        transition: all 0.3s ease;
+
+        &:nth-child(2) {
+          opacity: 1;
+        }
+
+        + .icon__bar {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    &:hover {
+      .icon {
+        &__bar {
+          &:nth-child(2) {
+            width: rem(22);
+          }
+        }
+      }
+    }
+  }
+
+  &__primary {
+    height: rem(50);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    h1 {
+      display: none;
+    }
+
+    ul {
+      display: none;
+      list-style-type: none;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+}

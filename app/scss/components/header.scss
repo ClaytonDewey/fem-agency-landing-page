@@ -1,10 +1,14 @@
 @use '../util' as *;
 
-header {
-  position: relative;
-  height: rem(538);
+.header {
+  &__hero {
+    img {
+      max-width: 100%;
+    }
 
-  img {
-    max-width: 100%;
+    h2 {
+      font-family: var(--ff-serif);
+      text-transform: uppercase;
+    }
   }
 }
