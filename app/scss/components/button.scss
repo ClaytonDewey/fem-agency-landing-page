@@ -1,0 +1,16 @@
+@use '../util' as *;
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &__text {
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+    font-size: rem(15);
+    letter-spacing: 1px;
+    color: var(--clr-gray-400);
+  }
+}

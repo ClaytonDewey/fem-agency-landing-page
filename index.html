@@ -64,8 +64,15 @@
 
 
   <main id="main">
-    <div class="flex transform">
+    <div class="flex">
       <div class="flex__item">
+        <picture>
+          <source media="(min-width: 48em)" srcset="./images/desktop/image-transform.jpg">
+          <img src="./images/mobile/image-transform.jpg" alt="" role="presentation">
+        </picture>
+      </div>
+
+      <div class="flex__item flex__item--content">
         <h3>Transform your brand</h3>
 
         <p>
@@ -73,18 +80,17 @@
           Engage your clients through compelling visuals that do most of the marketing for you.
         </p>
 
-        <a href="/">Learn more</a>
+        <a href="/" class="btn btn__text">Learn more</a>
       </div>
+
       <div class="flex__item">
         <picture>
-          <source media="(min-width: 48em)" srcset="./images/desktop/image-transform.jpg">
-          <img src="./images/mobile/image-transform.jpg" alt="" role="presentation">
+          <source media="(min-width: 48em)" srcset="./images/desktop/image-stand-out.jpg">
+          <img src="./images/mobile/image-stand-out.jpg" alt="" role="presentation">
         </picture>
       </div>
-    </div>
 
-    <div class="flex stand-out">
-      <div class="flex__item">
+      <div class="flex__item flex__item--content">
         <h3>Stand out to the right audience</h3>
 
         <p>
@@ -93,13 +99,7 @@
           build and extend your brand in digital places.
         </p>
 
-        <a href="/">Learn more</a>
-      </div>
-      <div class="flex__item">
-        <picture>
-          <source media="(min-width: 48em)" srcset="./images/desktop/image-stand-out.jpg">
-          <img src="./images/mobile/image-stand-out.jpg" alt="" role="presentation">
-        </picture>
+        <a href="/" class="btn btn__text">Learn more</a>
       </div>
     </div>
 
