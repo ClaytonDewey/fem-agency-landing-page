@@ -1,1 +1,7 @@
 @use '../util' as *;
+
+.nav {
+  &__primary {
+    display: none;
+  }
+}
