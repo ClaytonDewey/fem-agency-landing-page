@@ -1,63 +1,40 @@
-@use '../util' as *;
+// 450px, 750px, 1024px, 1169px, 1366px, 1920px, 2560px
+$breakpoints-up: (
+  'xsmall': '28.125em',
+  'small': '46.875em',
+  'medium': '64em',
+  'menu': '73.0625em',
+  'large': '85.375em',
+  'xlarge': '120em',
+  'xxlarge': '160em',
+);
 
-// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
-@mixin for-phone-only {
-  @media (max-width: rem(599)) {
-    @content;
-  }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: rem(600)) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: rem(900)) {
-    @content;
-  }
-}
-@mixin for-desktop-up {
-  @media (min-width: rem(1200)) {
-    @content;
-  }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: rem(1800)) {
-    @content;
-  }
-}
+// 449px, 749px, 1023px, 1168px, 1365px, 1919px, 2559px
+$breakpoints-down: (
+  'xsmall': '28.0625em',
+  'small': '46.8125em',
+  'medium': '63.9375em',
+  'menu': '73em',
+  'large': '85.3125em',
+  'xlarge': '119.9375em',
+  'xxlarge': '159.9375em',
+);
 
-@mixin for-phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) {
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
     @content;
   }
 }
 
-// usage example
-// .my-box {
-//   padding: 10px;
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
 
-//   @include for-desktop-up {
-//     padding: 20px;
-//   }
-// }
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
