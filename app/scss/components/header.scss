@@ -1,1 +1,47 @@
 @use '../util' as *;
+
+.home {
+  position: relative;
+
+  .header {
+    &__hero {
+      &-content {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        h2 {
+          color: var(--clr-white);
+          text-align: center;
+          letter-spacing: rem(6.25);
+          text-transform: uppercase;
+          font-size: var(--fs-header);
+          line-height: 1.35;
+          margin-bottom: rem(50);
+        }
+
+        img {
+          width: rem(30);
+          height: rem(107.48);
+          margin: auto;
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      &__hero {
+        &-content {
+          top: 28%;
+
+          h2 {
+            --fs-header: #{rem(56)};
+            letter-spacing: rem(8.75);
+            margin-bottom: rem(100);
+          }
+        }
+      }
+    }
+  }
+}
