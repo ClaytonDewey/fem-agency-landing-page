@@ -1,1 +1,14 @@
 @use '../util' as *;
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: rem(2) solid transparent;
+  background-image: none;
+  padding: 0 rem(15);
+  text-decoration: none;
+  font-size: inherit;
+  transition: var(--transition);
+}
